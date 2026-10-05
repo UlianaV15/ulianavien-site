@@ -1,72 +1,82 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-palette="sky">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="robots" content="noindex">
   <title>Ульяна Вьен: языки, UGC и жизнь в Испании</title>
-  <meta name="description" content="Консультации по UGC, занятия английским и испанским, реклама в блоге и гайд по самостоятельному изучению языков с нейросетями. Ульяна Вьен, Барселона.">
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#121315" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="Гайд по самостоятельному изучению языков с нейросетями, консультации по UGC, занятия английским и испанским. Ульяна Вьен, Барселона.">
+  <meta name="theme-color" content="#b6dbf8">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ульяна Вьен">
-  <meta property="og:description" content="Консультации по UGC, занятия английским и испанским, реклама в блоге, гайд по изучению языков с нейросетями.">
+  <meta property="og:description" content="Гайд по изучению языков с нейросетями, консультации по UGC, занятия английским и испанским.">
   <meta property="og:image" content="https://ulianavien.netlify.app/img/og.jpg">
   <meta property="og:locale" content="ru_RU">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.bunny.net">
-  <link rel="stylesheet" href="https://fonts.bunny.net/css?family=geologica:600,700|onest:400,500,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.bunny.net/css?family=geologica:600,700,800|onest:400,500,600|caveat:700&display=swap">
   <link rel="stylesheet" href="/styles.css">
+  <script>
+    // Draft palette switch: ?v=<name> or the last choice made on the bar.
+    (function () {
+      var ok = ["sky", "sunset", "ginger", "polka"];
+      var q = new URLSearchParams(location.search);
+      var p = q.get("v");
+      if (!p) { try { p = localStorage.getItem("palette"); } catch (e) {} }
+      if (ok.indexOf(p) > -1) document.documentElement.setAttribute("data-palette", p);
+      if (q.has("embed")) document.documentElement.classList.add("is-embed");
+    })();
+  </script>
 </head>
 <body>
-  <p class="draft-bar">Черновик сайта: цены, отзывы и фото ещё уточняются</p>
+  <div class="mock-bar" role="group" aria-label="Черновик: вариант цвета">
+    <span class="mock-bar__label">Цвет:</span>
+    <button type="button" data-set="sky">Небо</button>
+    <button type="button" data-set="sunset">Закат</button>
+    <button type="button" data-set="ginger">Рыжая</button>
+    <button type="button" data-set="polka">Горох</button>
+  </div>
 
-  <header class="profile">
+  <header class="hero tone-0">
     <div class="wrap">
-      <img class="profile__photo" src="/img/uliana-avatar.webp" width="350" height="350" alt="Ульяна Вьен">
-      <h1 class="profile__name">Ульяна Вьен</h1>
-      <p class="profile__line">Языки, UGC и жизнь в Барселоне</p>
-      <p class="profile__bio">Говорю на шести языках, преподаю английский и испанский и снимаю <span class="nowrap">UGC-видео</span> для брендов Европы.</p>
-      <ul class="socials">
-        <li><a href="https://www.instagram.com/ulianavien/" rel="me noopener" target="_blank" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" class="dot"/></svg></a></li>
-        <li><a href="https://www.youtube.com/@UlianaVien" rel="me noopener" target="_blank" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.75" y="5.5" width="18.5" height="13" rx="4"/><path d="M10.25 9.25v5.5l4.75-2.75z" class="fill"/></svg></a></li>
-        <li><a href="https://www.threads.net/@ulianavien" rel="me noopener" target="_blank" aria-label="Threads">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 11.2c-.4-2.4-2-3.6-4.3-3.6-2.6 0-4.3 1.8-4.3 4.5s1.7 4.4 4.1 4.4c2.2 0 3.6-1.3 3.6-3.1 0-1.6-1.2-2.5-3-2.5-1.5 0-2.5.8-2.5 1.9 0 1 .8 1.7 2 1.7 2.5 0 3.6-2.2 3.6-4.6 0-3.9-2.8-6.4-6.3-6.4C5.9 3.5 3.5 7 3.5 12s2.6 8.5 7.8 8.5c2.7 0 4.9-1 6.3-2.7"/></svg></a></li>
-      </ul>
+      <div class="hero__frame">
+        <img class="hero__photo" src="/img/uliana-portrait.webp" width="900" height="1125" alt="Ульяна Вьен, длинные рыжие волосы">
+        <p class="hand hero__hi" aria-hidden="true">привет, это я!</p>
+        <h1 class="hero__name"><span class="label">Ульяна Вьен</span></h1>
+      </div>
+      <p class="hero__line">Языки, UGC и жизнь в Барселоне</p>
+      <p class="hero__bio">Говорю на шести языках, преподаю английский и испанский и снимаю <span class="nowrap">UGC-видео</span> для брендов Европы.</p>
     </div>
   </header>
 
-  <nav class="doors" id="doors" aria-label="Чем могу помочь">
+  <nav class="doors tone-0" id="doors" aria-label="Чем могу помочь">
     <div class="wrap">
+      <p class="hand doors__hint" aria-hidden="true">выбирай, что нужно
+        <svg viewBox="0 0 40 32"><path d="M4 6c10-2 22 2 26 12 1.5 3.6 1.6 6.6 1 9.5M24.5 22.5l6.5 6 5-7"/></svg></p>
       <ul class="doors__list">
-        <li><a class="door door--main" href="#gaid">
+        <li><a class="door tone-1" href="#gaid">
           <span class="door__text"><span class="door__name">Гайд: учим язык с нейросетями</span><span class="door__sub">Новый продукт, старт продаж в октябре</span></span>
-          <svg class="door__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M6.5 13 12 18.5 17.5 13"/></svg>
+          <span class="door__go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M6.5 13 12 18.5 17.5 13"/></svg></span>
+          <span class="sticker hand" aria-hidden="true">новое</span>
         </a></li>
-        <li><a class="door" href="#ugc">
+        <li><a class="door tone-2" href="#ugc">
           <span class="door__text"><span class="door__name">Консультация по UGC</span><span class="door__sub">Как работать с брендами в Европе</span></span>
-          <svg class="door__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M6.5 13 12 18.5 17.5 13"/></svg>
+          <span class="door__go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M6.5 13 12 18.5 17.5 13"/></svg></span>
         </a></li>
-        <li><a class="door" href="#uroki">
+        <li><a class="door tone-3" href="#uroki">
           <span class="door__text"><span class="door__name">Английский и испанский</span><span class="door__sub">Занятия с преподавателем-полиглотом</span></span>
-          <svg class="door__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M6.5 13 12 18.5 17.5 13"/></svg>
-        </a></li>
-        <li><a class="door" href="#reklama">
-          <span class="door__text"><span class="door__name">Реклама и сотрудничество</span><span class="door__sub">Сторис, рилс, посты и <span class="nowrap">UGC-видео</span></span></span>
-          <svg class="door__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M6.5 13 12 18.5 17.5 13"/></svg>
+          <span class="door__go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M6.5 13 12 18.5 17.5 13"/></svg></span>
         </a></li>
       </ul>
     </div>
   </nav>
 
   <main>
-    <section class="about" id="obo-mne" aria-labelledby="about-title">
+    <section class="sheet about tone-0" id="obo-mne" aria-labelledby="about-title">
       <div class="wrap about__grid">
         <img class="about__photo" src="/img/uliana-hello.webp" width="610" height="605" loading="lazy" alt="Ульяна машет рукой на улице Барселоны">
         <div class="about__text">
-          <h2 id="about-title">Привет, я Ульяна</h2>
+          <h2 id="about-title"><span class="label">Привет, я Ульяна</span></h2>
           <p>В 2022 году мы уехали из России: сначала Армения, потом Турция, а когда собрали документы, перебрались в Испанию. Сейчас живу в Барселоне.</p>
           <p>У меня две большие страсти: иностранные языки и съёмка видео. В эмиграции я стала думать, как их объединить, и завела второй блог, на иностранную аудиторию. Именно в Европе я начала сотрудничать с зарубежными брендами и стала <span class="nowrap">UGC-креатором</span>.</p>
           <p>В блоге рассказываю, как устроена жизнь в Испании, как учить языки и как зарабатывать на контенте.</p>
@@ -75,67 +85,38 @@
       </div>
     </section>
 
-    <section class="offer offer--tint" id="gaid" aria-labelledby="gaid-title">
+    <section class="sheet offer tone-1" id="gaid" aria-labelledby="gaid-title">
       <div class="wrap">
-        <h2 id="gaid-title">Гайд: как учить язык самостоятельно с нейросетями</h2>
+        <h2 id="gaid-title"><span class="label">Гайд: как учить язык самостоятельно с нейросетями</span></h2>
         <p class="lead">Для тех, кто учит язык сам: не хватает часов с репетитором или репетитора нет совсем. Покажу, как выстроить самостоятельное изучение с помощью AI и нейросетей.</p>
 
-        <ol class="ladder" aria-label="Варианты">
-          <li class="ladder__step">
-            <div class="ladder__head"><h3>Базовый</h3><span class="ladder__price">цена скоро</span></div>
-            <p>Гайд: пошаговая система самостоятельного изучения с нейросетями.</p>
-          </li>
-          <li class="ladder__step">
-            <div class="ladder__head"><h3>Премиум</h3><span class="ladder__price">цена скоро</span></div>
-            <p>Гайд и видео, где я всё объясняю и показываю на примерах.</p>
-          </li>
-          <li class="ladder__step ladder__step--top">
-            <div class="ladder__head"><h3>VIP</h3><span class="ladder__price">цена скоро</span></div>
-            <p>Гайд, видео и личная консультация: составлю тебе план самостоятельного изучения.</p>
-          </li>
-        </ol>
+        <div class="ladder-wrap">
+          <span class="sticker sticker--ladder hand" aria-hidden="true">скоро!</span>
+          <ol class="ladder" aria-label="Варианты">
+            <li class="ladder__step">
+              <div class="ladder__head"><h3>Базовый</h3><span class="ladder__price">цена скоро</span></div>
+              <p>Гайд: пошаговая система самостоятельного изучения с нейросетями.</p>
+            </li>
+            <li class="ladder__step">
+              <div class="ladder__head"><h3>Премиум</h3><span class="ladder__price">цена скоро</span></div>
+              <p>Гайд и видео, где я всё объясняю и показываю на примерах.</p>
+            </li>
+            <li class="ladder__step ladder__step--top">
+              <div class="ladder__head"><h3>VIP</h3><span class="ladder__price">цена скоро</span></div>
+              <p>Гайд, видео и личная консультация: составлю тебе план самостоятельного изучения.</p>
+            </li>
+          </ol>
+        </div>
 
-        <p class="note">Продажи стартуют в середине октября. Оставь контакт, и я напишу, как только откроются.</p>
-
-        <form class="order" name="gaid-waitlist" method="POST" action="/spasibo/" data-netlify="true" netlify-honeypot="company-site" data-success="Записала. Напишу, как только откроются продажи.">
-          <input type="hidden" name="form-name" value="gaid-waitlist">
-          <input type="hidden" name="subject" value="Сайт: лист ожидания гайда">
-          <p class="hp"><label>Не заполняй это поле <input name="company-site" tabindex="-1" autocomplete="off"></label></p>
-          <div class="field">
-            <label for="g-name">Как тебя зовут</label>
-            <input id="g-name" name="name" autocomplete="given-name" required>
-          </div>
-          <div class="field">
-            <label for="g-contact">Где тебе написать</label>
-            <input id="g-contact" name="contact" placeholder="Telegram, WhatsApp или Instagram" required>
-          </div>
-          <fieldset class="field">
-            <legend>Какой язык учишь</legend>
-            <div class="chips">
-              <label class="chip"><input type="radio" name="language" value="Английский" required><span>Английский</span></label>
-              <label class="chip"><input type="radio" name="language" value="Испанский"><span>Испанский</span></label>
-              <label class="chip"><input type="radio" name="language" value="Другой"><span>Другой</span></label>
-            </div>
-          </fieldset>
-          <fieldset class="field">
-            <legend>Какой вариант интересен</legend>
-            <div class="chips">
-              <label class="chip"><input type="radio" name="tier" value="Базовый"><span>Базовый</span></label>
-              <label class="chip"><input type="radio" name="tier" value="Премиум"><span>Премиум</span></label>
-              <label class="chip"><input type="radio" name="tier" value="VIP"><span>VIP</span></label>
-              <label class="chip"><input type="radio" name="tier" value="Пока не знаю" checked><span>Пока не знаю</span></label>
-            </div>
-          </fieldset>
-          <button class="button" type="submit">Сообщить мне о старте</button>
-          <p class="privacy">Заявку увидит только Ульяна, контакт нужен, чтобы тебе ответить. <a href="/privacy/">Подробнее</a></p>
-        </form>
+        <p class="note">Продажи стартуют в середине октября: здесь появятся цены и оплата. Про старт расскажу в Instagram.</p>
+        <a class="ghost-button" href="https://www.instagram.com/ulianavien/" target="_blank" rel="noopener">Следить за стартом в Instagram</a>
         <a class="back-link" href="#doors">Вернуться к выбору</a>
       </div>
     </section>
 
-    <section class="offer" id="ugc" aria-labelledby="ugc-title">
+    <section class="sheet offer tone-2" id="ugc" aria-labelledby="ugc-title">
       <div class="wrap">
-        <h2 id="ugc-title">Консультация по UGC</h2>
+        <h2 id="ugc-title"><span class="label">Консультация по UGC</span></h2>
         <figure class="offer__photo">
           <img src="/img/uliana-sunset.webp" width="820" height="660" loading="lazy" alt="Ульяна на крыше в Барселоне, вдали Саграда Фамилия на закате">
         </figure>
@@ -147,153 +128,118 @@
           <li>Чек за видео: от 50 € у новичков до 1000 € за пакет видео.</li>
         </ul>
 
-        <form class="order" name="ugc-consultation" method="POST" action="/spasibo/" data-netlify="true" netlify-honeypot="company-site" data-success="Заявка у меня. Напишу тебе, чтобы договориться о времени консультации.">
-          <input type="hidden" name="form-name" value="ugc-consultation">
-          <input type="hidden" name="subject" value="Сайт: заявка на консультацию по UGC">
-          <p class="hp"><label>Не заполняй это поле <input name="company-site" tabindex="-1" autocomplete="off"></label></p>
-          <div class="field">
-            <label for="u-name">Как тебя зовут</label>
-            <input id="u-name" name="name" autocomplete="given-name" required>
-          </div>
-          <div class="field">
-            <label for="u-contact">Где тебе написать</label>
-            <input id="u-contact" name="contact" placeholder="Telegram, WhatsApp или Instagram" required>
-          </div>
-          <div class="field">
-            <label for="u-place">Где ты живёшь</label>
-            <input id="u-place" name="place" placeholder="Страна и город">
-          </div>
-          <fieldset class="field">
-            <legend>Где ты сейчас в UGC</legend>
-            <div class="chips">
-              <label class="chip"><input type="radio" name="stage" value="Только присматриваюсь" required><span>Только присматриваюсь</span></label>
-              <label class="chip"><input type="radio" name="stage" value="Есть первые работы"><span>Есть первые работы</span></label>
-              <label class="chip"><input type="radio" name="stage" value="Уже работаю с брендами"><span>Уже работаю с брендами</span></label>
+        <details class="signup">
+          <summary>Записаться на консультацию
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9.5 12 15l5.5-5.5"/></svg></summary>
+          <form class="order" name="ugc-consultation" method="POST" action="/spasibo/" data-netlify="true" netlify-honeypot="company-site" data-success="Заявка у меня. Напишу тебе, чтобы договориться о времени консультации.">
+            <input type="hidden" name="form-name" value="ugc-consultation">
+            <input type="hidden" name="subject" value="Сайт: заявка на консультацию по UGC">
+            <p class="hp"><label>Не заполняй это поле <input name="company-site" tabindex="-1" autocomplete="off"></label></p>
+            <div class="field">
+              <label for="u-name">Как тебя зовут</label>
+              <input id="u-name" name="name" autocomplete="given-name" required>
             </div>
-          </fieldset>
-          <div class="field">
-            <label for="u-topic">Что хочешь разобрать <span class="optional">необязательно</span></label>
-            <textarea id="u-topic" name="topic" rows="3"></textarea>
-          </div>
-          <button class="button" type="submit">Записаться на консультацию</button>
-          <p class="privacy">Заявку увидит только Ульяна, контакт нужен, чтобы тебе ответить. <a href="/privacy/">Подробнее</a></p>
-        </form>
+            <div class="field">
+              <label for="u-contact">Где тебе написать</label>
+              <input id="u-contact" name="contact" placeholder="Telegram, WhatsApp или Instagram" required>
+            </div>
+            <div class="field">
+              <label for="u-place">Где ты живёшь</label>
+              <input id="u-place" name="place" placeholder="Страна и город">
+            </div>
+            <fieldset class="field">
+              <legend>Где ты сейчас в UGC</legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="stage" value="Только присматриваюсь" required><span>Только присматриваюсь</span></label>
+                <label class="chip"><input type="radio" name="stage" value="Есть первые работы"><span>Есть первые работы</span></label>
+                <label class="chip"><input type="radio" name="stage" value="Уже работаю с брендами"><span>Уже работаю с брендами</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="u-topic">Что хочешь разобрать <span class="optional">необязательно</span></label>
+              <textarea id="u-topic" name="topic" rows="3"></textarea>
+            </div>
+            <button class="button" type="submit">Отправить заявку</button>
+            <p class="privacy">Заявку увидит только Ульяна, контакт нужен, чтобы тебе ответить. <a href="/privacy/">Подробнее</a></p>
+          </form>
+        </details>
         <a class="back-link" href="#doors">Вернуться к выбору</a>
       </div>
     </section>
 
-    <section class="offer offer--tint" id="uroki" aria-labelledby="uroki-title">
+    <section class="sheet offer tone-3" id="uroki" aria-labelledby="uroki-title">
       <div class="wrap">
-        <h2 id="uroki-title">Занятия английским и испанским</h2>
+        <h2 id="uroki-title"><span class="label">Занятия английским и испанским</span></h2>
+        <figure class="offer__photo offer__photo--tall">
+          <img src="/img/uliana-polka.webp" width="900" height="1125" loading="lazy" alt="Ульяна в платье в горошек на солнечной улице Барселоны">
+        </figure>
         <p class="lead">Занимаюсь с учениками английским и испанским больше восьми лет. Подойдёт, если готовишься к переезду или уже живёшь за границей и язык нужен для жизни.</p>
 
-        <form class="order" name="lessons" method="POST" action="/spasibo/" data-netlify="true" netlify-honeypot="company-site" data-success="Заявка у меня. Напишу тебе, подберём время и формат.">
-          <input type="hidden" name="form-name" value="lessons">
-          <input type="hidden" name="subject" value="Сайт: заявка на занятия">
-          <p class="hp"><label>Не заполняй это поле <input name="company-site" tabindex="-1" autocomplete="off"></label></p>
-          <div class="field">
-            <label for="l-name">Как тебя зовут</label>
-            <input id="l-name" name="name" autocomplete="given-name" required>
-          </div>
-          <div class="field">
-            <label for="l-contact">Где тебе написать</label>
-            <input id="l-contact" name="contact" placeholder="Telegram, WhatsApp или Instagram" required>
-          </div>
-          <fieldset class="field">
-            <legend>Язык</legend>
-            <div class="chips">
-              <label class="chip"><input type="radio" name="language" value="Английский" required><span>Английский</span></label>
-              <label class="chip"><input type="radio" name="language" value="Испанский"><span>Испанский</span></label>
+        <details class="signup">
+          <summary>Записаться на занятия
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9.5 12 15l5.5-5.5"/></svg></summary>
+          <form class="order" name="lessons" method="POST" action="/spasibo/" data-netlify="true" netlify-honeypot="company-site" data-success="Заявка у меня. Напишу тебе, подберём время и формат.">
+            <input type="hidden" name="form-name" value="lessons">
+            <input type="hidden" name="subject" value="Сайт: заявка на занятия">
+            <p class="hp"><label>Не заполняй это поле <input name="company-site" tabindex="-1" autocomplete="off"></label></p>
+            <div class="field">
+              <label for="l-name">Как тебя зовут</label>
+              <input id="l-name" name="name" autocomplete="given-name" required>
             </div>
-          </fieldset>
-          <fieldset class="field">
-            <legend>Уровень сейчас</legend>
-            <div class="chips">
-              <label class="chip"><input type="radio" name="level" value="С нуля" required><span>С нуля</span></label>
-              <label class="chip"><input type="radio" name="level" value="Начальный"><span>Начальный</span></label>
-              <label class="chip"><input type="radio" name="level" value="Средний"><span>Средний</span></label>
-              <label class="chip"><input type="radio" name="level" value="Продвинутый"><span>Продвинутый</span></label>
+            <div class="field">
+              <label for="l-contact">Где тебе написать</label>
+              <input id="l-contact" name="contact" placeholder="Telegram, WhatsApp или Instagram" required>
             </div>
-          </fieldset>
-          <div class="field">
-            <label for="l-goal">Зачем тебе язык и когда удобно заниматься <span class="optional">необязательно</span></label>
-            <textarea id="l-goal" name="goal" rows="3" placeholder="Например: переезд в Испанию весной, вечера по будням"></textarea>
-          </div>
-          <button class="button" type="submit">Записаться на занятия</button>
-          <p class="privacy">Заявку увидит только Ульяна, контакт нужен, чтобы тебе ответить. <a href="/privacy/">Подробнее</a></p>
-        </form>
+            <fieldset class="field">
+              <legend>Язык</legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="language" value="Английский" required><span>Английский</span></label>
+                <label class="chip"><input type="radio" name="language" value="Испанский"><span>Испанский</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Уровень сейчас</legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="level" value="С нуля" required><span>С нуля</span></label>
+                <label class="chip"><input type="radio" name="level" value="Начальный"><span>Начальный</span></label>
+                <label class="chip"><input type="radio" name="level" value="Средний"><span>Средний</span></label>
+                <label class="chip"><input type="radio" name="level" value="Продвинутый"><span>Продвинутый</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="l-goal">Зачем тебе язык и когда удобно заниматься <span class="optional">необязательно</span></label>
+              <textarea id="l-goal" name="goal" rows="3" placeholder="Например: переезд в Испанию весной, вечера по будням"></textarea>
+            </div>
+            <button class="button" type="submit">Отправить заявку</button>
+            <p class="privacy">Заявку увидит только Ульяна, контакт нужен, чтобы тебе ответить. <a href="/privacy/">Подробнее</a></p>
+          </form>
+        </details>
         <a class="back-link" href="#doors">Вернуться к выбору</a>
       </div>
     </section>
 
-    <section class="offer" id="reklama" aria-labelledby="reklama-title">
+    <section class="sheet brands tone-0" id="reklama" aria-labelledby="reklama-title">
       <div class="wrap">
-        <h2 id="reklama-title">Реклама и сотрудничество</h2>
-        <p class="lead">Блог про жизнь в Испании, языки и эмиграцию. Около 7&nbsp;300 подписчиков в Instagram: русскоязычная аудитория, которая живёт за границей или собирается переехать.</p>
-        <h3 class="list-title">Форматы</h3>
-        <ul class="checks">
-          <li>Сторис, рилс и посты в моём блоге.</li>
-          <li><span class="nowrap">UGC-видео</span> для вашего аккаунта, без публикации у меня.</li>
-        </ul>
-        <p class="note" lang="es">¿Marca local? Escríbeme por <a href="https://ig.me/m/ulianavien" target="_blank" rel="noopener">Instagram Direct</a> en español o en inglés.</p>
-
-        <form class="order" name="collab" method="POST" action="/spasibo/" data-netlify="true" netlify-honeypot="company-site" data-success="Запрос у меня. Отвечу на почту, которую вы указали.">
-          <input type="hidden" name="form-name" value="collab">
-          <input type="hidden" name="subject" value="Сайт: запрос на рекламу или сотрудничество">
-          <p class="hp"><label>Не заполняй это поле <input name="company-site" tabindex="-1" autocomplete="off"></label></p>
-          <div class="field">
-            <label for="c-name">Ваше имя</label>
-            <input id="c-name" name="name" autocomplete="name" required>
-          </div>
-          <div class="field">
-            <label for="c-brand">Бренд или компания</label>
-            <input id="c-brand" name="brand" autocomplete="organization" required>
-          </div>
-          <div class="field">
-            <label for="c-link">Сайт или Instagram</label>
-            <input id="c-link" name="link" placeholder="Ссылка или @аккаунт">
-          </div>
-          <fieldset class="field">
-            <legend>Что интересно</legend>
-            <div class="chips">
-              <label class="chip"><input type="checkbox" name="format" value="Сторис"><span>Сторис</span></label>
-              <label class="chip"><input type="checkbox" name="format" value="Рилс"><span>Рилс</span></label>
-              <label class="chip"><input type="checkbox" name="format" value="Пост"><span>Пост</span></label>
-              <label class="chip"><input type="checkbox" name="format" value="UGC-видео"><span>UGC-видео</span></label>
-              <label class="chip"><input type="checkbox" name="format" value="Другое"><span>Другое</span></label>
-            </div>
-          </fieldset>
-          <div class="field-row">
-            <div class="field">
-              <label for="c-dates">Сроки</label>
-              <input id="c-dates" name="dates" placeholder="Например: до конца ноября">
-            </div>
-            <div class="field">
-              <label for="c-budget">Бюджет <span class="optional">необязательно</span></label>
-              <input id="c-budget" name="budget" placeholder="Сумма в €">
-            </div>
-          </div>
-          <div class="field">
-            <label for="c-email">Почта для ответа</label>
-            <input id="c-email" name="email" type="email" autocomplete="email" required>
-          </div>
-          <div class="field">
-            <label for="c-comment">Комментарий <span class="optional">необязательно</span></label>
-            <textarea id="c-comment" name="comment" rows="3"></textarea>
-          </div>
-          <button class="button" type="submit">Отправить запрос</button>
-          <p class="privacy">Запрос увидит только Ульяна, почта нужна, чтобы вам ответить. <a href="/privacy/">Подробнее</a></p>
-        </form>
-        <a class="back-link" href="#doors">Вернуться к выбору</a>
+        <h2 id="reklama-title"><span class="label">Реклама и сотрудничество</span></h2>
+        <p>Сторис, рилс, посты в блоге и <span class="nowrap">UGC-видео</span> для вашего аккаунта. Пишите на почту:</p>
+        <p class="brands__mail"><a class="mail" data-u="51aveemereanailu" data-d="moc.liamg">ulianaeremeeva15 (собака) gmail.com</a></p>
+        <p class="brands__es" lang="es">¿Marca local? Escríbeme en español o en inglés.</p>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer tone-0">
     <div class="wrap">
       <p class="footer__name">Ульяна Вьен</p>
-      <p class="footer__line">Барселона · <a href="https://www.instagram.com/ulianavien/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.youtube.com/@UlianaVien" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.threads.net/@ulianavien" target="_blank" rel="noopener">Threads</a></p>
-      <p class="footer__small">© 2026 · <a href="/privacy/">Конфиденциальность</a></p>
+      <ul class="socials">
+        <li><a href="https://www.instagram.com/ulianavien/" rel="me noopener" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" class="dot"/></svg></a></li>
+        <li><a href="https://www.youtube.com/@UlianaVien" rel="me noopener" target="_blank" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.75" y="5.5" width="18.5" height="13" rx="4"/><path d="M10.25 9.25v5.5l4.75-2.75z" class="fill"/></svg></a></li>
+        <li><a href="https://www.threads.net/@ulianavien" rel="me noopener" target="_blank" aria-label="Threads">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 11.2c-.4-2.4-2-3.6-4.3-3.6-2.6 0-4.3 1.8-4.3 4.5s1.7 4.4 4.1 4.4c2.2 0 3.6-1.3 3.6-3.1 0-1.6-1.2-2.5-3-2.5-1.5 0-2.5.8-2.5 1.9 0 1 .8 1.7 2 1.7 2.5 0 3.6-2.2 3.6-4.6 0-3.9-2.8-6.4-6.3-6.4C5.9 3.5 3.5 7 3.5 12s2.6 8.5 7.8 8.5c2.7 0 4.9-1 6.3-2.7"/></svg></a></li>
+      </ul>
+      <p class="footer__small">Барселона · © 2026 · <a href="/privacy/">Конфиденциальность</a></p>
     </div>
   </footer>
 

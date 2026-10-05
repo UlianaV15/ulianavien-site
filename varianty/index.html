@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Варианты цвета · черновик</title>
+  <style>
+    body { margin: 0; padding: 24px 16px 40px; font: 15px/1.4 system-ui, sans-serif; color: #f2f2f2; background: #1b1b1f; }
+    h1 { margin: 0 0 6px; font-size: 20px; }
+    p { margin: 0 0 20px; color: #b9b9c0; }
+    a { color: inherit; }
+    .grid { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+    figure { margin: 0; }
+    figcaption { margin-bottom: 8px; font-weight: 600; }
+    .phone { width: 312px; height: 675px; overflow: hidden; border-radius: 28px; border: 6px solid #333; background: #fff; }
+    iframe { width: 390px; height: 844px; border: 0; transform: scale(0.8); transform-origin: 0 0; }
+  </style>
+</head>
+<body>
+  <h1>Четыре варианта цвета</h1>
+  <p>Каждый экран прокручивается. На телефоне удобнее открыть <a href="/">сайт</a> и переключать цвет в чёрной полоске сверху.</p>
+  <div class="grid">
+    <figure><figcaption>Небо</figcaption><div class="phone"><iframe src="/?v=sky&amp;embed=1" title="Небо"></iframe></div></figure>
+    <figure><figcaption>Закат</figcaption><div class="phone"><iframe src="/?v=sunset&amp;embed=1" title="Закат"></iframe></div></figure>
+    <figure><figcaption>Рыжая</figcaption><div class="phone"><iframe src="/?v=ginger&amp;embed=1" title="Рыжая"></iframe></div></figure>
+    <figure><figcaption>Горох</figcaption><div class="phone"><iframe src="/?v=polka&amp;embed=1" title="Горох"></iframe></div></figure>
+  </div>
+</body>
+</html>

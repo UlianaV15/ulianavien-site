@@ -1,3 +1,33 @@
+// Draft palette bar: switches data-palette on <html>, remembers the choice, keeps ?v= in the address.
+(function () {
+  var root = document.documentElement;
+  var buttons = document.querySelectorAll(".mock-bar [data-set]");
+  function apply(name) {
+    root.setAttribute("data-palette", name);
+    buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.set === name)); });
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = getComputedStyle(root).getPropertyValue("--bg").trim();
+  }
+  buttons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      apply(b.dataset.set);
+      try { localStorage.setItem("palette", b.dataset.set); } catch (e) {}
+      var url = new URL(location.href);
+      url.searchParams.set("v", b.dataset.set);
+      history.replaceState(null, "", url);
+    });
+  });
+  apply(root.getAttribute("data-palette") || "sky");
+})();
+
+// The address is stored reversed and split so harvesters do not pick it up from the markup.
+document.querySelectorAll(".mail").forEach(function (el) {
+  function rev(s) { return s.split("").reverse().join(""); }
+  var address = rev(el.dataset.u) + "@" + rev(el.dataset.d);
+  el.href = "mailto:" + address;
+  el.textContent = address;
+});
+
 // Forms: native validation in Russian, then send to Netlify Forms without leaving the page.
 // Without JS the forms still post normally and land on /spasibo/.
 (function () {
