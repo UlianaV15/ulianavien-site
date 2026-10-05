@@ -7,7 +7,7 @@
   --ink-2: #4b443e;
   --ink-3: #6e665f;
   --line: #e4e0dc;
-  --line-strong: #cbc5bf;
+  --line-strong: #8f877f;
   --accent: #b8411a;
   --accent-hover: #9f3714;
   --accent-ink: #ffffff;
@@ -30,7 +30,7 @@
     --ink-2: #cdc7c1;
     --ink-3: #a49d96;
     --line: #2b2d31;
-    --line-strong: #43464c;
+    --line-strong: #6b6f76;
     --accent: #ef7446;
     --accent-hover: #f58a62;
     --accent-ink: #1d1916;
@@ -290,7 +290,7 @@ p {
 }
 
 .door--main .door__sub {
-  color: color-mix(in srgb, var(--accent-ink) 90%, var(--accent));
+  color: inherit;
 }
 
 .door--main:hover {
@@ -663,8 +663,8 @@ p {
 }
 
 .order__done .tick {
-  stroke-dasharray: 24;
-  stroke-dashoffset: 24;
+  stroke-dasharray: 27;
+  stroke-dashoffset: 27;
   animation: draw 0.6s var(--ease-out) 0.2s forwards;
 }
 
