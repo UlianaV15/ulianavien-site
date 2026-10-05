@@ -133,18 +133,17 @@ p {
 
 /* Profile */
 .profile {
-  padding-top: 24px;
+  padding-top: 20px;
   padding-bottom: 4px;
   text-align: center;
 }
 
 .profile__photo {
-  width: 92px;
-  height: 92px;
+  width: 112px;
+  height: 112px;
   margin: 0 auto 12px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: 50% 18%;
 }
 
 .profile__name {
@@ -209,16 +208,9 @@ p {
 
 /* Doors */
 .doors {
-  padding-top: 22px;
+  padding-top: 18px;
   padding-bottom: 48px;
-}
-
-.doors__title {
-  margin-bottom: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  text-align: center;
-  color: var(--ink-2);
+  scroll-margin-top: 12px;
 }
 
 .doors__list {
@@ -405,6 +397,15 @@ p {
   margin-top: 18px;
   font-size: 16px;
   color: var(--ink-2);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 /* Product tiers: one ladder, each step adds to the previous */
