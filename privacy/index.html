@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Конфиденциальность · Ульяна Вьен</title>
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121315" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link rel="stylesheet" href="https://fonts.bunny.net/css?family=geologica:600,700|onest:400,500,600&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="legal">
+    <div class="wrap">
+      <a class="back-link" href="/">На главную</a>
+      <h1>Конфиденциальность</h1>
+      <p class="lead">Какие данные ты оставляешь на этом сайте и что с ними происходит.</p>
+      <p class="legal__date">Обновлено 5 октября 2026</p>
+
+      <h2>Кто отвечает за данные</h2>
+      <p>Uliana Eremeeva (в блоге Ульяна Вьен), Барселона, Испания.</p>
+      <p>Почта: <a class="mail" data-u="51aveemereanailu" data-d="moc.liamg">ulianaeremeeva15 (собака) gmail.com</a></p>
+
+      <h2>Что я собираю</h2>
+      <p>Только то, что ты сама пишешь в форме: имя, контакт для ответа (Telegram, WhatsApp, Instagram или почту), выбранные варианты и комментарий. Если пишет бренд, добавляются название компании, ссылка, сроки и бюджет.</p>
+      <p>Cookies, счётчиков посещений и рекламных трекеров на сайте нет.</p>
+
+      <h2>Зачем</h2>
+      <p>Чтобы ответить на заявку и договориться о консультации, занятиях или сотрудничестве. Основание: ты сама просишь связаться с тобой перед возможным договором (статья 6.1.b GDPR).</p>
+      <p>Рассылки без твоего отдельного согласия не делаю. Данные не продаю и никому не передаю, кроме сервисов из следующего раздела.</p>
+
+      <h2>Где хранятся данные</h2>
+      <ul class="legal__list">
+        <li><b>Netlify, Inc.</b> (США): хостинг сайта, принимает заявки из форм. Netlify участвует в EU-U.S. Data Privacy Framework, на этом основании данные из ЕС можно законно хранить в США. Как и любой хостинг, Netlify записывает в технические журналы IP-адрес и браузер посетителя.</li>
+        <li><b>Google</b> (Gmail): уведомление о заявке приходит мне на почту.</li>
+        <li><b>Bunny Fonts</b> (BunnyWay d.o.o., Словения): отдаёт шрифты сайта. При загрузке страницы получает IP-адрес, cookies не ставит.</li>
+      </ul>
+
+      <h2>Сколько храню</h2>
+      <p>Пока мы общаемся и ещё 12 месяцев после последнего контакта, потом удаляю. Если попросишь, удалю раньше.</p>
+
+      <h2>Твои права</h2>
+      <p>Ты можешь попросить показать, исправить или удалить свои данные, ограничить их использование, возразить против него или получить копию. Напиши на почту выше, отвечу в течение месяца.</p>
+      <p>Если считаешь, что твои права нарушены, можешь пожаловаться в испанское агентство по защите данных: <a href="https://www.aepd.es/" target="_blank" rel="noopener">AEPD</a>.</p>
+
+      <h2>Если тебе меньше 14 лет</h2>
+      <p>Заявку на занятия за тебя оставляет родитель.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer__name">Ульяна Вьен</p>
+      <p class="footer__small">© 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    // The address is stored reversed and split so harvesters do not pick it up from the markup.
+    document.querySelectorAll(".mail").forEach(function (el) {
+      function rev(s) { return s.split("").reverse().join(""); }
+      var address = rev(el.dataset.u) + "@" + rev(el.dataset.d);
+      el.href = "mailto:" + address;
+      el.textContent = address;
+    });
+  </script>
+</body>
+</html>
