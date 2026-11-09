@@ -528,12 +528,6 @@ p {
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.5 12.5l5 5 10-11'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
-.note {
-  margin-top: 20px;
-  font-size: 16px;
-  color: var(--s-ink-2);
-}
-
 .back-link {
   display: flex;
   align-items: center;
@@ -544,83 +538,106 @@ p {
   font-weight: 600;
 }
 
-.ghost-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 54px;
-  margin-top: 16px;
-  padding: 14px 20px;
-  font: 700 17px/1.2 var(--font-display);
-  letter-spacing: -0.01em;
-  color: var(--s-bg);
-  text-decoration: none;
-  background: var(--s-ink);
-  border-radius: 999px;
-  transition: transform 0.15s;
-}
-
-.ghost-button:active {
-  transform: scale(0.985);
-}
-
-/* Product tiers: one ladder, each step adds to the previous */
-.ladder-wrap {
-  position: relative;
-  margin-top: 28px;
-}
-
-.sticker--ladder {
-  top: -30px;
-  right: 6px;
-  z-index: 1;
-  font-size: 24px;
-  transform: rotate(-6deg);
-}
-
-.ladder {
-  margin: 0;
+/* Product tiers: three white cards in one column, the middle one framed and stickered */
+.tiers {
+  display: grid;
+  gap: 18px;
+  margin: 28px 0 0;
   padding: 0;
   list-style: none;
+}
+
+.tier {
+  position: relative;
+  padding: 20px 18px 18px;
   color: var(--card-ink);
   background: var(--card);
   border-radius: var(--radius);
-  overflow: hidden;
+  scroll-margin-top: 24px;
 }
 
-.ladder__step {
-  padding: 16px 18px 17px;
+.tier--pick {
+  margin-top: 12px;
+  padding: 26px 15px 15px;
+  border: 3px solid var(--sticker);
 }
 
-.ladder__step + .ladder__step {
-  border-top: 1px solid var(--card-line);
+.tier__badge {
+  top: -19px;
+  right: 14px;
+  font-size: 22px;
+  transform: rotate(-4deg);
 }
 
-.ladder__step--top {
-  background: color-mix(in srgb, var(--d1) 12%, var(--card));
+.tier__name {
+  font-size: 22px;
 }
 
-.ladder__head {
+.tier__price {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
+  gap: 2px 10px;
+  margin-top: 6px;
 }
 
-.ladder__head h3 {
-  font-size: 20px;
+.tier__rub {
+  font: 800 34px/1.1 var(--font-display);
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
 }
 
-.ladder__price {
-  font-size: 14px;
-  white-space: nowrap;
+.tier__eur {
+  font-size: 15px;
   color: var(--card-ink-2);
   font-variant-numeric: tabular-nums;
 }
 
-.ladder__step p {
-  margin-top: 4px;
+.tier__for {
+  margin-top: 12px;
+  font-size: 24px;
+  line-height: 1.12;
+  color: var(--btn);
+}
+
+.tier__list {
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 16px;
+}
+
+.tier__list li::before {
+  background: var(--btn);
+}
+
+.tier__list strong {
+  font-weight: 600;
+}
+
+.tier__note {
+  margin-top: 16px;
+  padding: 12px 14px;
+  font-size: 15px;
+  background: color-mix(in srgb, var(--sticker) 20%, var(--card));
+  border-radius: var(--radius-sm);
+}
+
+.tier__limit {
+  margin-top: 12px;
+  font-size: 14px;
   color: var(--card-ink-2);
+}
+
+.tier__buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.tier__buy:focus-visible {
+  outline-color: var(--btn);
 }
 
 /* Sign-up: a pill that opens into the form card */

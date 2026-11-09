@@ -55,7 +55,7 @@
         <svg viewBox="0 0 40 32"><path d="M4 6c10-2 22 2 26 12 1.5 3.6 1.6 6.6 1 9.5M24.5 22.5l6.5 6 5-7"/></svg></p>
       <ul class="doors__list">
         <li><a class="door tone-1" href="#gaid">
-          <span class="door__text"><span class="door__name">Гайд: учим язык с нейросетями</span><span class="door__sub">Новый продукт, старт продаж в октябре</span></span>
+          <span class="door__text"><span class="door__name">Гайд: учим язык с нейросетями</span><span class="door__sub">Три тарифа, от 1&nbsp;499&nbsp;₽</span></span>
           <span class="door__go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M6.5 13 12 18.5 17.5 13"/></svg></span>
           <span class="sticker hand" aria-hidden="true">новое</span>
         </a></li>
@@ -90,26 +90,53 @@
         <h2 id="gaid-title"><span class="label">Гайд: как учить язык самостоятельно с нейросетями</span></h2>
         <p class="lead">Для тех, кто учит язык сам: не хватает часов с репетитором или репетитора нет совсем. Покажу, как выстроить самостоятельное изучение с помощью AI и нейросетей.</p>
 
-        <div class="ladder-wrap">
-          <span class="sticker sticker--ladder hand" aria-hidden="true">скоро!</span>
-          <ol class="ladder" aria-label="Варианты">
-            <li class="ladder__step">
-              <div class="ladder__head"><h3>Базовый</h3><span class="ladder__price">цена скоро</span></div>
-              <p>Гайд: пошаговая система самостоятельного изучения с нейросетями.</p>
-            </li>
-            <li class="ladder__step">
-              <div class="ladder__head"><h3>Премиум</h3><span class="ladder__price">цена скоро</span></div>
-              <p>Гайд и видео, где я всё объясняю и показываю на примерах.</p>
-            </li>
-            <li class="ladder__step ladder__step--top">
-              <div class="ladder__head"><h3>VIP</h3><span class="ladder__price">цена скоро</span></div>
-              <p>Гайд, видео и личная консультация: составлю тебе план самостоятельного изучения.</p>
-            </li>
-          </ol>
-        </div>
+        <!-- Ссылки на оплату: заменить href="#prodamus-..." на ссылки из кабинета Продамуса -->
+        <ol class="tiers" aria-label="Тарифы">
+          <li class="tier" id="gaid-bazovyy">
+            <h3 class="tier__name">Базовый</h3>
+            <p class="tier__price"><span class="tier__rub">1&nbsp;499&nbsp;₽</span> <span class="tier__eur">≈&nbsp;15&nbsp;€</span></p>
+            <p class="tier__for hand">Если хочешь разобраться сам и в своём темпе</p>
+            <ul class="checks tier__list">
+              <li>Гайд на 33 страницы: как учить язык с ИИ без курсов и репетитора</li>
+              <li>Готовые промпты для ChatGPT и Claude: копируешь и вставляешь</li>
+              <li>Разговорная практика, аудирование, чтение, письмо и грамматика по шагам</li>
+              <li>Все промпты отдельным файлом: отправляешь его ИИ целиком, и он их запоминает</li>
+              <li>Скилл «Личный репетитор»: ИИ помнит твой уровень и ведёт дневник твоих ошибок</li>
+              <li>План на первую неделю</li>
+              <li>Доступ навсегда, без подписки</li>
+            </ul>
+            <a class="button tier__buy" href="#prodamus-bazovyy">Купить за 1&nbsp;499&nbsp;₽</a>
+          </li>
+          <li class="tier tier--pick" id="gaid-optimalnyy">
+            <span class="sticker tier__badge hand">выбирают чаще всего</span>
+            <h3 class="tier__name">Оптимальный</h3>
+            <p class="tier__price"><span class="tier__rub">1&nbsp;899&nbsp;₽</span> <span class="tier__eur">≈&nbsp;19&nbsp;€</span></p>
+            <p class="tier__for hand">Если учишь слова и всё равно их забываешь</p>
+            <ul class="checks tier__list">
+              <li><strong>Всё из тарифа «Базовый»</strong></li>
+              <li>Видео 16 минут: «Учишь слова и забываешь через день? 6 методов полиглотов»</li>
+              <li>Флеш-карточки, интервальное повторение, голосовой помощник и ещё три метода, которыми я пользуюсь сама</li>
+              <li>Почему списки слов не работают и что делать вместо них</li>
+              <li>Доступ навсегда</li>
+            </ul>
+            <a class="button tier__buy" href="#prodamus-optimalnyy">Купить за 1&nbsp;899&nbsp;₽</a>
+          </li>
+          <li class="tier" id="gaid-vip">
+            <h3 class="tier__name">VIP</h3>
+            <p class="tier__price"><span class="tier__rub">9&nbsp;990&nbsp;₽</span> <span class="tier__eur">≈&nbsp;100&nbsp;€</span></p>
+            <p class="tier__for hand">Если хочешь, чтобы я разобрала именно твой случай</p>
+            <ul class="checks tier__list">
+              <li><strong>Всё из тарифа «Оптимальный»</strong></li>
+              <li>Созвон со мной 60 минут в Zoom</li>
+              <li>Персональный файл с рекомендациями после созвона: под твой язык, уровень и цель</li>
+              <li>Возможность задать мне вопросы после созвона</li>
+            </ul>
+            <p class="tier__note">Это не консультация «как учить языки вообще». Это разбор твоей ситуации: почему у тебя не идёт и что конкретно поменять.</p>
+            <p class="tier__limit">Беру не больше 5 человек в месяц</p>
+            <a class="button tier__buy" href="#prodamus-vip">Записаться за 9&nbsp;990&nbsp;₽</a>
+          </li>
+        </ol>
 
-        <p class="note">Продажи стартуют в середине октября: здесь появятся цены и оплата. Про старт расскажу в Instagram.</p>
-        <a class="ghost-button" href="https://www.instagram.com/ulianavien/" target="_blank" rel="noopener">Следить за стартом в Instagram</a>
         <a class="back-link" href="#doors">Вернуться к выбору</a>
       </div>
     </section>
