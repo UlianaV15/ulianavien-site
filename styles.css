@@ -1142,3 +1142,34 @@ p {
     animation-delay: 0s !important;
   }
 }
+
+/* Legal pages and the offer line under the tiers */
+.legal__sub {
+  margin-top: 8px;
+  font-size: 17px;
+  color: var(--ink-2);
+}
+
+.legal ul + p,
+.legal p + ul {
+  margin-top: 10px;
+}
+
+.tiers__legal {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--s-ink-2);
+}
+
+.tiers__legal a {
+  color: var(--s-ink);
+}
+
+.footer__year {
+  margin-top: 6px;
+}
+
+.footer__small a[aria-current="page"] {
+  text-decoration: none;
+  font-weight: 600;
+}
