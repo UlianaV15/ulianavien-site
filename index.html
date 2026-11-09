@@ -1,42 +1,23 @@
 <!doctype html>
-<html lang="ru" data-palette="sky">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="robots" content="noindex">
   <title>Ульяна Вьен: языки, UGC и жизнь в Испании</title>
-  <meta name="description" content="Гайд по самостоятельному изучению языков с нейросетями, консультации по UGC, занятия английским и испанским. Ульяна Вьен, Барселона.">
-  <meta name="theme-color" content="#b6dbf8">
+  <meta name="description" content="Гайд по самостоятельному изучению языков с нейросетями, консультации по UGC. Ульяна Вьен, Барселона.">
+  <meta name="theme-color" content="#a8411a">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ульяна Вьен">
-  <meta property="og:description" content="Гайд по изучению языков с нейросетями, консультации по UGC, занятия английским и испанским.">
+  <meta property="og:description" content="Гайд по изучению языков с нейросетями, консультации по UGC.">
   <meta property="og:image" content="https://ulianavien.netlify.app/img/og.jpg">
   <meta property="og:locale" content="ru_RU">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.bunny.net">
   <link rel="stylesheet" href="https://fonts.bunny.net/css?family=geologica:600,700,800|onest:400,500,600|caveat:700&display=swap">
   <link rel="stylesheet" href="/styles.css">
-  <script>
-    // Draft palette switch: ?v=<name> or the last choice made on the bar.
-    (function () {
-      var ok = ["sky", "sunset", "ginger", "polka"];
-      var q = new URLSearchParams(location.search);
-      var p = q.get("v");
-      if (!p) { try { p = localStorage.getItem("palette"); } catch (e) {} }
-      if (ok.indexOf(p) > -1) document.documentElement.setAttribute("data-palette", p);
-      if (q.has("embed")) document.documentElement.classList.add("is-embed");
-    })();
-  </script>
 </head>
 <body>
-  <div class="mock-bar" role="group" aria-label="Черновик: вариант цвета">
-    <span class="mock-bar__label">Цвет:</span>
-    <button type="button" data-set="sky">Небо</button>
-    <button type="button" data-set="sunset">Закат</button>
-    <button type="button" data-set="ginger">Рыжая</button>
-    <button type="button" data-set="polka">Горох</button>
-  </div>
-
   <header class="hero tone-0">
     <div class="wrap">
       <div class="hero__frame">
@@ -61,10 +42,6 @@
         </a></li>
         <li><a class="door tone-2" href="#ugc">
           <span class="door__text"><span class="door__name">Консультация по UGC</span><span class="door__sub">Как работать с брендами в Европе</span></span>
-          <span class="door__go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M6.5 13 12 18.5 17.5 13"/></svg></span>
-        </a></li>
-        <li><a class="door tone-3" href="#uroki">
-          <span class="door__text"><span class="door__name">Английский и испанский</span><span class="door__sub">Занятия с преподавателем-полиглотом</span></span>
           <span class="door__go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M6.5 13 12 18.5 17.5 13"/></svg></span>
         </a></li>
       </ul>
@@ -185,57 +162,6 @@
             <div class="field">
               <label for="u-topic">Что хочешь разобрать <span class="optional">необязательно</span></label>
               <textarea id="u-topic" name="topic" rows="3"></textarea>
-            </div>
-            <button class="button" type="submit">Отправить заявку</button>
-            <p class="privacy">Заявку увидит только Ульяна, контакт нужен, чтобы тебе ответить. <a href="/privacy/">Подробнее</a></p>
-          </form>
-        </details>
-        <a class="back-link" href="#doors">Вернуться к выбору</a>
-      </div>
-    </section>
-
-    <section class="sheet offer tone-3" id="uroki" aria-labelledby="uroki-title">
-      <div class="wrap">
-        <h2 id="uroki-title"><span class="label">Занятия английским и испанским</span></h2>
-        <figure class="offer__photo offer__photo--tall">
-          <img src="/img/uliana-polka.webp" width="900" height="1125" loading="lazy" alt="Ульяна в платье в горошек на солнечной улице Барселоны">
-        </figure>
-        <p class="lead">Занимаюсь с учениками английским и испанским больше восьми лет. Подойдёт, если готовишься к переезду или уже живёшь за границей и язык нужен для жизни.</p>
-
-        <details class="signup">
-          <summary>Записаться на занятия
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9.5 12 15l5.5-5.5"/></svg></summary>
-          <form class="order" name="lessons" method="POST" action="/spasibo/" data-netlify="true" netlify-honeypot="company-site" data-success="Заявка у меня. Напишу тебе, подберём время и формат.">
-            <input type="hidden" name="form-name" value="lessons">
-            <input type="hidden" name="subject" value="Сайт: заявка на занятия">
-            <p class="hp"><label>Не заполняй это поле <input name="company-site" tabindex="-1" autocomplete="off"></label></p>
-            <div class="field">
-              <label for="l-name">Как тебя зовут</label>
-              <input id="l-name" name="name" autocomplete="given-name" required>
-            </div>
-            <div class="field">
-              <label for="l-contact">Где тебе написать</label>
-              <input id="l-contact" name="contact" placeholder="Telegram, WhatsApp или Instagram" required>
-            </div>
-            <fieldset class="field">
-              <legend>Язык</legend>
-              <div class="chips">
-                <label class="chip"><input type="radio" name="language" value="Английский" required><span>Английский</span></label>
-                <label class="chip"><input type="radio" name="language" value="Испанский"><span>Испанский</span></label>
-              </div>
-            </fieldset>
-            <fieldset class="field">
-              <legend>Уровень сейчас</legend>
-              <div class="chips">
-                <label class="chip"><input type="radio" name="level" value="С нуля" required><span>С нуля</span></label>
-                <label class="chip"><input type="radio" name="level" value="Начальный"><span>Начальный</span></label>
-                <label class="chip"><input type="radio" name="level" value="Средний"><span>Средний</span></label>
-                <label class="chip"><input type="radio" name="level" value="Продвинутый"><span>Продвинутый</span></label>
-              </div>
-            </fieldset>
-            <div class="field">
-              <label for="l-goal">Зачем тебе язык и когда удобно заниматься <span class="optional">необязательно</span></label>
-              <textarea id="l-goal" name="goal" rows="3" placeholder="Например: переезд в Испанию весной, вечера по будням"></textarea>
             </div>
             <button class="button" type="submit">Отправить заявку</button>
             <p class="privacy">Заявку увидит только Ульяна, контакт нужен, чтобы тебе ответить. <a href="/privacy/">Подробнее</a></p>

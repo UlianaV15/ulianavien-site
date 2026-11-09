@@ -1,50 +1,7 @@
-/* Palettes. Four draft variants share one set of roles:
-   bg/ink: the page ground; d1..d3: the three doors and the sections they open;
+/* Palette "Рыжая", chosen 2026-11-09. Roles:
+   bg/ink: the page ground; d1, d2: the two doors and the sections they open (guide, UGC);
    btn: the send button inside a white form card; hl: handwritten notes on the ground. */
-:root,
-[data-palette="sky"] {
-  --bg: #b6dbf8;
-  --ink: #0d2747;
-  --ink-2: #2a4a72;
-  --hl: #c2410c;
-  --d1: #b8420f;
-  --d1-ink: #ffffff;
-  --d1-ink-2: #ffeadf;
-  --d2: #ffd046;
-  --d2-ink: #0d2747;
-  --d2-ink-2: #3d3410;
-  --d3: #1b54a0;
-  --d3-ink: #ffffff;
-  --d3-ink-2: #d7e7fb;
-  --btn: #b8420f;
-  --btn-ink: #ffffff;
-  --sticker: #ffd046;
-  --sticker-ink: #0d2747;
-  --card-ink: #0d2747;
-}
-
-[data-palette="sunset"] {
-  --bg: #dccbf5;
-  --ink: #2b1035;
-  --ink-2: #4f2d5c;
-  --hl: #b8321c;
-  --d1: #ff7350;
-  --d1-ink: #2b1035;
-  --d1-ink-2: #4a1a2a;
-  --d2: #ffb43c;
-  --d2-ink: #2b1035;
-  --d2-ink-2: #4a2a10;
-  --d3: #4a1d5e;
-  --d3-ink: #ffffff;
-  --d3-ink-2: #ecd9f7;
-  --btn: #4a1d5e;
-  --btn-ink: #ffffff;
-  --sticker: #4a1d5e;
-  --sticker-ink: #ffffff;
-  --card-ink: #2b1035;
-}
-
-[data-palette="ginger"] {
+:root {
   --bg: #a8411a;
   --ink: #ffffff;
   --ink-2: #ffe6d6;
@@ -55,35 +12,11 @@
   --d2: #a6d6fa;
   --d2-ink: #0f2a4a;
   --d2-ink-2: #24466e;
-  --d3: #5e1a0e;
-  --d3-ink: #ffffff;
-  --d3-ink-2: #f5d2c4;
   --btn: #a8411a;
   --btn-ink: #ffffff;
   --sticker: #5e1a0e;
   --sticker-ink: #ffffff;
   --card-ink: #2e1408;
-}
-
-[data-palette="polka"] {
-  --bg: #ffe3dd;
-  --ink: #171313;
-  --ink-2: #4a3a38;
-  --hl: #c4241a;
-  --d1: #c4241a;
-  --d1-ink: #ffffff;
-  --d1-ink-2: #ffe9e6;
-  --d2: #171313;
-  --d2-ink: #ffffff;
-  --d2-ink-2: #e6dcd9;
-  --d3: #ffdf6b;
-  --d3-ink: #171313;
-  --d3-ink-2: #3f3510;
-  --btn: #c4241a;
-  --btn-ink: #ffffff;
-  --sticker: #ffdf6b;
-  --sticker-ink: #171313;
-  --card-ink: #171313;
 }
 
 :root {
@@ -107,7 +40,6 @@ body,
 .tone-0 { --s-bg: var(--bg); --s-ink: var(--ink); --s-ink-2: var(--ink-2); }
 .tone-1 { --s-bg: var(--d1); --s-ink: var(--d1-ink); --s-ink-2: var(--d1-ink-2); }
 .tone-2 { --s-bg: var(--d2); --s-ink: var(--d2-ink); --s-ink-2: var(--d2-ink-2); }
-.tone-3 { --s-bg: var(--d3); --s-ink: var(--d3-ink); --s-ink-2: var(--d3-ink-2); }
 
 *,
 *::before,
@@ -205,57 +137,12 @@ p {
   box-decoration-break: clone;
 }
 
-/* Draft palette switch, removed at launch */
-.mock-bar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 8px 12px;
-  font-size: 13px;
-  color: #ffffff;
-  background: #1b1b1f;
-}
-
-.is-embed .mock-bar {
-  display: none;
-}
-
-.mock-bar__label {
-  margin-right: 4px;
-  opacity: 0.8;
-}
-
-.mock-bar button {
-  min-height: 32px;
-  padding: 4px 11px;
-  font: 500 13px/1 var(--font-text);
-  color: inherit;
-  background: transparent;
-  border: 1px solid rgb(255 255 255 / 0.35);
-  border-radius: 999px;
-  cursor: pointer;
-}
-
-.mock-bar button[aria-pressed="true"] {
-  color: #1b1b1f;
-  background: #ffffff;
-  border-color: #ffffff;
-}
-
 /* Hero */
 .hero {
   padding-top: 18px;
   padding-bottom: 6px;
   color: var(--s-ink);
   background: var(--s-bg);
-}
-
-[data-palette="polka"] .hero,
-[data-palette="polka"] .doors {
-  background-image: radial-gradient(circle, rgb(196 36 26 / 0.16) 22%, transparent 24%);
-  background-size: 26px 26px;
 }
 
 .hero__frame {
